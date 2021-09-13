@@ -21,7 +21,7 @@ namespace PayrollManagementSystem_API.Controllers
             _context = context;
         }
 
-        [Authorize]
+        //[Authorize]
         // GET: api/TimeSheets
         [HttpGet]
         public async Task<ActionResult<IEnumerable<TimeSheet>>> GetTimeSheets()

@@ -23,6 +23,7 @@ namespace PayrollManagementSystem_API.Controllers
         }
 
         // GET: api/PayrollMasters
+        [Authorize]
         [HttpGet]
         public async Task<ActionResult<IEnumerable<PayrollMaster>>> GetPayrollMasters()
         {
@@ -36,7 +37,7 @@ namespace PayrollManagementSystem_API.Controllers
             return Ok();
         }
         // GET: api/PayrollMasters/5
-        
+       // [Authorize]
         [HttpGet("{id}")]
         public async Task<ActionResult<PayrollMaster>> GetPayrollMaster(string id)
         {

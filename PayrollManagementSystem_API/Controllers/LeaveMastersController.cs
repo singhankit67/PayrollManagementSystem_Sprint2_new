@@ -22,6 +22,7 @@ namespace PayrollManagementSystem_API.Controllers
         }
 
         // GET: api/LeaveMasters
+        
         [HttpGet]
         public async Task<ActionResult<IEnumerable<LeaveMaster>>> GetLeaveMasters()
         {
@@ -37,6 +38,7 @@ namespace PayrollManagementSystem_API.Controllers
         }
 
         // GET: api/LeaveMasters/5
+        //[Authorize]
         [HttpGet("{id}")]
         public async Task<ActionResult<LeaveMaster>> GetLeaveMaster(string id)
         {
