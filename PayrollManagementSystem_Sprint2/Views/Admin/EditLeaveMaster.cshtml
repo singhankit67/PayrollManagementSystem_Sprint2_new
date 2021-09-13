@@ -1,0 +1,44 @@
+﻿@model PayrollManagementSystem_Sprint2.Models.LeaveMaster
+
+@{
+    ViewData["Title"] = "EditLeaveMaster";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>EditLeaveMaster</h1>
+
+<h4>LeaveMaster</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="EditLeaveMaster">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="LeavesAvailable" class="control-label"></label>
+                <input asp-for="LeavesAvailable" class="form-control" />
+                <span asp-validation-for="LeavesAvailable" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LeavesAvailed" class="control-label"></label>
+                <input asp-for="LeavesAvailed" class="form-control" />
+                <span asp-validation-for="LeavesAvailed" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LeavesBalance" class="control-label"></label>
+                <input asp-for="LeavesBalance" class="form-control" />
+                <span asp-validation-for="LeavesBalance" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Reset" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to Dashboard</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
